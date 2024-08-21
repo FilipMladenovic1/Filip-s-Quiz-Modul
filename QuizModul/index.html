@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Modul</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <header>
+            <h1>Filip's Quiz-Modul</h1>
+        </header>
+        <main id="quiz">
+            <div class="options">
+                <label><input type="radio" name="answer" value="a"> Option A</label>
+                <label><input type="radio" name="answer" value="b"> Option B</label>
+                <label><input type="radio" name="answer" value="c"> Option C</label>
+                <label><input type="radio" name="answer" value="d"> Option D</label>
+            </div>
+        </main>
+        <div class="controls">
+            <button id="prev-btn" disabled aria-label="Zurück zur vorherigen Frage">Zurück</button>
+            <button id="next-btn" aria-label="Zurück zur nächsten Frage">Weiter</button>
+        </div>
+        <p id="progress"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+/* Allgemeine Stile für die Seite */
+body {
+    font-family: 'Roboto', sans-serif; /* Sicherstellen, dass die Schriftart geladen ist */
+    background: linear-gradient(to right, #ffafbd, #ffc3a0); /* Farbverlauf für den Hintergrund */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333; /* Textfarbe für die gesamte Seite */
+}
+
+/* Quiz-Container Stile */
+.quiz-container {
+    background-color: #ffffff; /* Hintergrundfarbe des Containers */
+    padding: 30px;
+    border-radius: 15px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
+    width: 100%;
+    max-width: 600px; /* Maximalbreite des Containers */
+    text-align: center; /* Text zentrieren */
+    box-sizing: border-box; /* Padding und Border in der Breite enthalten */
+    border: 2px solid #e0e0e0; /* Dünner Rahmen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Sanfte Übergänge beim Hover */
+}
+
+/* Hover-Effekt für den Container */
+.quiz-container:hover {
+    transform: scale(1.02); /* Container leicht vergrößern beim Hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensiverer Schatten */
+}
+
+/* Optionen-Stile (Radio-Buttons und Labels zentrieren) */
+.options {
+    display: inline-block; /* Inline-Block für zentrierte Ausrichtung */
+    text-align: left; /* Innerhalb der Options-Gruppe linksbündig */
+}
+
+/* Label-Stile für die Radio-Buttons */
+label {
+    display: block; /* Macht das Label zu einem Block-Element */
+    margin: 10px 0; /* Abstände zwischen den Optionen */
+    cursor: pointer; /* Ändert den Mauszeiger zu einem Pointer */
+}
+
+/* Feedback-Stile */
+.feedback {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.05); /* Leicht durchsichtiger Hintergrund */
+}
+
+.feedback.correct {
+    color: #4caf50; /* Grüner Farbton für richtige Antworten */
+    border: 2px solid #4caf50; /* Grün umrandet */
+}
+
+.feedback.wrong {
+    color: #f44336; /* Roter Farbton für falsche Antworten */
+    border: 2px solid #f44336; /* Rot umrandet */
+}
+
+/* Stil für Schaltflächen */
+button {
+    background-color: #007bff; /* Blaue Hintergrundfarbe */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Abgerundete Ecken für Buttons */
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Sanfte Übergänge */
+}
+
+button:hover {
+    background-color: #0056b3; /* Dunklerer Blauton beim Hover */
+    transform: scale(1.05); /* Knöpfe leicht vergrößern beim Hover */
+}
+
+button:disabled {
+    background-color: #d6d6d6; /* Graue Hintergrundfarbe für deaktivierte Knöpfe */
+    color: #a6a6a6; /* Graue Schriftfarbe für deaktivierte Knöpfe */
+    cursor: not-allowed; /* Nicht erlaubt Cursor */
+}
+
+/* Media Queries für kleinere Bildschirme */
+@media (max-width: 600px) {
+    .quiz-container {
+        padding: 15px;
+        max-width: 100%; /* Container auf volle Breite setzen */
+    }
+
+    button {
+        width: 100%; /* Schaltflächen auf volle Breite setzen */
+        font-size: 14px; /* Schriftgröße der Schaltflächen anpassen */
+        padding: 12px; /* Padding der Schaltflächen anpassen */
+    }
+
+    h2 {
+        font-size: 20px; /* Schriftgröße der Fragen anpassen */
+    }
+}
